@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2F22F1F71CA3815100B6F418 /* PTCommentInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F22F1F61CA3815100B6F418 /* PTCommentInputView.m */; };
-		2FA5FB251CA3C0C700C739B4 /* PTHomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA5FB241CA3C0C700C739B4 /* PTHomeTableViewCell.m */; };
-		2FA5FB281CA3C3A400C739B4 /* PTModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA5FB271CA3C3A400C739B4 /* PTModel.m */; };
-		2FA5FB2B1CA3C42000C739B4 /* PTBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA5FB2A1CA3C42000C739B4 /* PTBaseModel.m */; };
+		2FC24DF71CBFA65300086CBF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC24DF61CBFA65300086CBF /* ViewController.m */; };
+		2FC24DFD1CBFA65900086CBF /* PTCommentInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC24DFA1CBFA65900086CBF /* PTCommentInputView.m */; };
+		2FC24DFE1CBFA65900086CBF /* PTHomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC24DFC1CBFA65900086CBF /* PTHomeTableViewCell.m */; };
+		2FC24E041CBFA65C00086CBF /* PTBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC24E011CBFA65C00086CBF /* PTBaseModel.m */; };
+		2FC24E051CBFA65C00086CBF /* PTModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC24E031CBFA65C00086CBF /* PTModel.m */; };
+		2FC24E0A1CBFA66200086CBF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC24E081CBFA66200086CBF /* AppDelegate.m */; };
 		2FF8F94E1CA23604003CD86F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FF8F94D1CA23604003CD86F /* main.m */; };
-		2FF8F9511CA23604003CD86F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FF8F9501CA23604003CD86F /* AppDelegate.m */; };
-		2FF8F9541CA23604003CD86F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FF8F9531CA23604003CD86F /* ViewController.m */; };
 		2FF8F9571CA23604003CD86F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FF8F9551CA23604003CD86F /* Main.storyboard */; };
 		2FF8F9591CA23604003CD86F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FF8F9581CA23604003CD86F /* Assets.xcassets */; };
 		2FF8F95C1CA23604003CD86F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FF8F95A1CA23604003CD86F /* LaunchScreen.storyboard */; };
@@ -39,21 +39,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2F22F1F51CA3815100B6F418 /* PTCommentInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTCommentInputView.h; sourceTree = "<group>"; };
-		2F22F1F61CA3815100B6F418 /* PTCommentInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTCommentInputView.m; sourceTree = "<group>"; };
-		2FA5FB231CA3C0C700C739B4 /* PTHomeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTHomeTableViewCell.h; sourceTree = "<group>"; };
-		2FA5FB241CA3C0C700C739B4 /* PTHomeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTHomeTableViewCell.m; sourceTree = "<group>"; };
-		2FA5FB261CA3C3A400C739B4 /* PTModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTModel.h; sourceTree = "<group>"; };
-		2FA5FB271CA3C3A400C739B4 /* PTModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTModel.m; sourceTree = "<group>"; };
-		2FA5FB291CA3C42000C739B4 /* PTBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTBaseModel.h; sourceTree = "<group>"; };
-		2FA5FB2A1CA3C42000C739B4 /* PTBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTBaseModel.m; sourceTree = "<group>"; };
-		2FA5FB2C1CA3CAB000C739B4 /* PTCommentInputViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTCommentInputViewDelegate.h; sourceTree = "<group>"; };
+		2FC24DF51CBFA65300086CBF /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		2FC24DF61CBFA65300086CBF /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2FC24DF91CBFA65900086CBF /* PTCommentInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTCommentInputView.h; sourceTree = "<group>"; };
+		2FC24DFA1CBFA65900086CBF /* PTCommentInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTCommentInputView.m; sourceTree = "<group>"; };
+		2FC24DFB1CBFA65900086CBF /* PTHomeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTHomeTableViewCell.h; sourceTree = "<group>"; };
+		2FC24DFC1CBFA65900086CBF /* PTHomeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTHomeTableViewCell.m; sourceTree = "<group>"; };
+		2FC24E001CBFA65C00086CBF /* PTBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTBaseModel.h; sourceTree = "<group>"; };
+		2FC24E011CBFA65C00086CBF /* PTBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTBaseModel.m; sourceTree = "<group>"; };
+		2FC24E021CBFA65C00086CBF /* PTModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTModel.h; sourceTree = "<group>"; };
+		2FC24E031CBFA65C00086CBF /* PTModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTModel.m; sourceTree = "<group>"; };
+		2FC24E071CBFA66200086CBF /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2FC24E081CBFA66200086CBF /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2FC24E091CBFA66200086CBF /* PTCommentInputViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTCommentInputViewDelegate.h; sourceTree = "<group>"; };
 		2FF8F9491CA23604003CD86F /* Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FF8F94D1CA23604003CD86F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		2FF8F94F1CA23604003CD86F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		2FF8F9501CA23604003CD86F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		2FF8F9521CA23604003CD86F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		2FF8F9531CA23604003CD86F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		2FF8F9561CA23604003CD86F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2FF8F9581CA23604003CD86F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2FF8F95B1CA23604003CD86F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -91,6 +91,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2FC24DF41CBFA65300086CBF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2FC24DF51CBFA65300086CBF /* ViewController.h */,
+				2FC24DF61CBFA65300086CBF /* ViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2FC24DF81CBFA65900086CBF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2FC24DF91CBFA65900086CBF /* PTCommentInputView.h */,
+				2FC24DFA1CBFA65900086CBF /* PTCommentInputView.m */,
+				2FC24DFB1CBFA65900086CBF /* PTHomeTableViewCell.h */,
+				2FC24DFC1CBFA65900086CBF /* PTHomeTableViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2FC24DFF1CBFA65C00086CBF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2FC24E001CBFA65C00086CBF /* PTBaseModel.h */,
+				2FC24E011CBFA65C00086CBF /* PTBaseModel.m */,
+				2FC24E021CBFA65C00086CBF /* PTModel.h */,
+				2FC24E031CBFA65C00086CBF /* PTModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2FC24E061CBFA66200086CBF /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				2FC24E071CBFA66200086CBF /* AppDelegate.h */,
+				2FC24E081CBFA66200086CBF /* AppDelegate.m */,
+				2FC24E091CBFA66200086CBF /* PTCommentInputViewDelegate.h */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
 		2FF8F9401CA23604003CD86F = {
 			isa = PBXGroup;
 			children = (
@@ -114,17 +155,10 @@
 		2FF8F94B1CA23604003CD86F /* Test */ = {
 			isa = PBXGroup;
 			children = (
-				2FA5FB2C1CA3CAB000C739B4 /* PTCommentInputViewDelegate.h */,
-				2FF8F9521CA23604003CD86F /* ViewController.h */,
-				2FF8F9531CA23604003CD86F /* ViewController.m */,
-				2FA5FB231CA3C0C700C739B4 /* PTHomeTableViewCell.h */,
-				2FA5FB241CA3C0C700C739B4 /* PTHomeTableViewCell.m */,
-				2F22F1F51CA3815100B6F418 /* PTCommentInputView.h */,
-				2F22F1F61CA3815100B6F418 /* PTCommentInputView.m */,
-				2FA5FB261CA3C3A400C739B4 /* PTModel.h */,
-				2FA5FB271CA3C3A400C739B4 /* PTModel.m */,
-				2FA5FB291CA3C42000C739B4 /* PTBaseModel.h */,
-				2FA5FB2A1CA3C42000C739B4 /* PTBaseModel.m */,
+				2FC24E061CBFA66200086CBF /* Delegate */,
+				2FC24DFF1CBFA65C00086CBF /* Model */,
+				2FC24DF81CBFA65900086CBF /* View */,
+				2FC24DF41CBFA65300086CBF /* Controller */,
 				2FF8F94C1CA23604003CD86F /* Supporting Files */,
 			);
 			path = Test;
@@ -135,8 +169,6 @@
 			children = (
 				2FF8F9551CA23604003CD86F /* Main.storyboard */,
 				2FF8F95A1CA23604003CD86F /* LaunchScreen.storyboard */,
-				2FF8F94F1CA23604003CD86F /* AppDelegate.h */,
-				2FF8F9501CA23604003CD86F /* AppDelegate.m */,
 				2FF8F9581CA23604003CD86F /* Assets.xcassets */,
 				2FF8F95D1CA23604003CD86F /* Info.plist */,
 				2FF8F94D1CA23604003CD86F /* main.m */,
@@ -292,13 +324,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2FA5FB2B1CA3C42000C739B4 /* PTBaseModel.m in Sources */,
-				2FF8F9541CA23604003CD86F /* ViewController.m in Sources */,
-				2FA5FB281CA3C3A400C739B4 /* PTModel.m in Sources */,
-				2F22F1F71CA3815100B6F418 /* PTCommentInputView.m in Sources */,
-				2FA5FB251CA3C0C700C739B4 /* PTHomeTableViewCell.m in Sources */,
-				2FF8F9511CA23604003CD86F /* AppDelegate.m in Sources */,
+				2FC24DFE1CBFA65900086CBF /* PTHomeTableViewCell.m in Sources */,
+				2FC24E051CBFA65C00086CBF /* PTModel.m in Sources */,
+				2FC24DF71CBFA65300086CBF /* ViewController.m in Sources */,
 				2FF8F94E1CA23604003CD86F /* main.m in Sources */,
+				2FC24DFD1CBFA65900086CBF /* PTCommentInputView.m in Sources */,
+				2FC24E041CBFA65C00086CBF /* PTBaseModel.m in Sources */,
+				2FC24E0A1CBFA66200086CBF /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
