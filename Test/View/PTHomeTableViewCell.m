@@ -8,6 +8,7 @@
 
 #import "PTHomeTableViewCell.h"
 #import "PTBaseModel.h"
+#import "ViewController.h"
 
 @implementation PTHomeTableViewCell
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
@@ -27,7 +28,7 @@
     self.imgView.image = [UIImage imageNamed:baseModel.imgPath];
 }
 
-- (void)showCommentInputView {
+- (IBAction)showCommentInputView:(UIButton *)sender {
     NSLog(@"showCommentInputView...");
     [self.delegate shouldShowKeyBoardWithIndexPath:self.indexPath];
 }
@@ -54,7 +55,7 @@
         [_commentButton setTitle:@"评论" forState:UIControlStateNormal];
         [_commentButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         _commentButton.frame = CGRectMake([UIScreen mainScreen].bounds.size.width - 60, 20, 50, 25);
-        [_commentButton addTarget:self action:@selector(showCommentInputView) forControlEvents:UIControlEventTouchUpInside];
+        [_commentButton addTarget:self action:@selector(showCommentInputView:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _commentButton;
 }
