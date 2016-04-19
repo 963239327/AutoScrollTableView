@@ -11,6 +11,8 @@
 #import "ViewController.h"
 
 @implementation PTHomeTableViewCell
+
+#pragma mark - init
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         [self.contentView addSubview:self.contentLabel];
@@ -20,6 +22,7 @@
     return self;
 }
 
+#pragma mark - public method
 - (void)assignmentUIWithBaseModel:(PTBaseModel *)baseModel forIndexPath:(NSIndexPath *)indexPath {
     self.indexPath = indexPath;
     NSLog(@"assignmentUIWithBaseModel...");
@@ -28,6 +31,7 @@
     self.imgView.image = [UIImage imageNamed:baseModel.imgPath];
 }
 
+#pragma mark - PTCommentInputViewDelegate
 - (IBAction)showCommentInputView:(UIButton *)sender {
     NSLog(@"showCommentInputView...");
     [self.delegate shouldShowKeyBoardWithIndexPath:self.indexPath];

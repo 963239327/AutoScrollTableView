@@ -12,20 +12,16 @@
     CGFloat _offsetY;
 }
 
-
 @end
 
 @implementation PTCommentInputView
 
+#pragma mark - init
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
         [self addSubview:self.inputTextView];
     }
     return self;
-}
-
-- (void)layoutSubviews {
-    [super layoutSubviews];
 }
 
 #pragma mark - UITextViewDelegate
