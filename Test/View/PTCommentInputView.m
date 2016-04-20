@@ -27,7 +27,6 @@
 #pragma mark - UITextViewDelegate
 - (void)textViewDidChange:(UITextView *)textView {
     CGFloat height = [self contentSizeOfText:textView.text];
-    NSLog(@"----- %f", self.frame.origin.y);
     _offsetY = self.frame.origin.y;
     if (height != self.frame.size.height) {
         _offsetY = _offsetY - (height - self.frame.size.height);
@@ -44,7 +43,6 @@
     NSString *str = textView.text;
     str = [str stringByAppendingString:text];
     CGFloat height = [self contentSizeOfText:str];
-    
     _offsetY = self.frame.origin.y;
     if (height != self.frame.size.height) {
         _offsetY = _offsetY - (height - self.frame.size.height);

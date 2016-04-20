@@ -47,7 +47,6 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     PTHomeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cid" forIndexPath:indexPath];
     cell.delegate = self;
-    
     PTBaseModel *baseModel = [self.dataSource objectAtIndex:indexPath.row];
     [cell assignmentUIWithBaseModel:baseModel forIndexPath:indexPath];
     return cell;
@@ -114,7 +113,6 @@
 - (PTCommentInputView *)myView {
     if (!_myView) {
         _myView = [[PTCommentInputView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - 64, self.view.frame.size.width, 25)];
-        //_myView.backgroundColor = [UIColor grayColor];
        
         __weak typeof(self) weakSelf = self;
         _myView.changeFrame = ^(CGFloat offsetY) {
