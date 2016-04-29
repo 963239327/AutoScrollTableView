@@ -25,15 +25,12 @@
 #pragma mark - public method
 - (void)assignmentUIWithBaseModel:(PTBaseModel *)baseModel forIndexPath:(NSIndexPath *)indexPath {
     self.indexPath = indexPath;
-    NSLog(@"assignmentUIWithBaseModel...");
-    NSLog(@"baseModel = %@ %@", baseModel.content, baseModel.imgPath);
     self.contentLabel.text = baseModel.content;
     self.imgView.image = [UIImage imageNamed:baseModel.imgPath];
 }
 
 #pragma mark - PTCommentInputViewDelegate
 - (IBAction)showCommentInputView:(UIButton *)sender {
-    NSLog(@"showCommentInputView...");
     [self.delegate shouldShowKeyBoardWithIndexPath:self.indexPath];
 }
 

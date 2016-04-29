@@ -13,7 +13,6 @@ typedef void(^PTCommentChangeFrameBlock)(CGFloat offsetY);
 @interface PTCommentInputView : UIView <UITextViewDelegate>
 
 @property (nonatomic, strong) UITextView *inputTextView;
-
 @property (nonatomic, copy) PTCommentChangeFrameBlock changeFrame;
 
 @end

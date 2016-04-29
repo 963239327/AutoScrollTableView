@@ -26,10 +26,8 @@
 #pragma mark - life cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     self.title = @"孩子玩什么";
     self.navigationController.navigationBar.translucent = NO;
-    
     [self.view addSubview:self.myTableView];
     [self.view addSubview:self.myView];
 }
@@ -59,7 +57,6 @@
 
 #pragma mark - PTCommentInputViewDelegate
 - (void)shouldShowKeyBoardWithIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"shouldShowKeyBoard...");
     [self.myView.inputTextView becomeFirstResponder];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.6 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self.myTableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionBottom];
@@ -78,12 +75,11 @@
     
     [UIView animateWithDuration:duration animations:^{
         CGFloat h = 0.0f;
-        NSLog(@"%f", rect.origin.y);
-        if (fabs(rect.origin.y - 465.0) < 1e-3 || fabs(rect.origin.y - 442.333333) < 1e-3) {
+        if (fabs(rect.origin.y - [UIScreen mainScreen].bounds.size.height) < 1e-3) {
+            self.myTableView.frame = CGRectMake(0, 0, self.myTableView.frame.size.width, self.view.frame.size.height);
+        } else {
             h = self.myView.inputTextView.frame.size.height;
             self.myTableView.frame = CGRectMake(0, 0, self.myTableView.frame.size.width, rect.origin.y - h - 65);
-        }else{
-            self.myTableView.frame = CGRectMake(0, 0, self.myTableView.frame.size.width, self.view.frame.size.height);
         }
         self.myView.frame = CGRectMake(0,  rect.origin.y-64-h, [UIScreen mainScreen].bounds.size.width, 25);
     }];
@@ -117,10 +113,8 @@
         __weak typeof(self) weakSelf = self;
         _myView.changeFrame = ^(CGFloat offsetY) {
             CGRect frame = weakSelf.myTableView.frame;
-            
             CGPoint offset = weakSelf.myTableView.contentOffset;
             offset.y = offset.y + frame.size.height - offsetY;
-            
             frame.size.height = offsetY;
             weakSelf.myTableView.frame = frame;
             [weakSelf.myTableView setContentOffset:offset animated:YES];
@@ -134,10 +128,7 @@
         _myTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height-64)];
         _myTableView.delegate = self;
         _myTableView.dataSource = self;
-        
-        // 注册cell
         [_myTableView registerClass:[PTHomeTableViewCell class] forCellReuseIdentifier:@"cid"];
-        
         // 给tableView添加手势以隐藏键盘
         UITapGestureRecognizer *tableViewGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(commentTableViewTouchInSide)];
         tableViewGesture.numberOfTapsRequired = 1;

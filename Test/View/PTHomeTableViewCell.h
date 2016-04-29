@@ -10,7 +10,6 @@
 #import "PTCommentInputViewDelegate.h"
 
 @class PTBaseModel;
-
 @interface PTHomeTableViewCell : UITableViewCell
 
 @property (nonatomic, strong) UIImageView *imgView;
