@@ -26,32 +26,30 @@
 
 #pragma mark - UITextViewDelegate
 - (void)textViewDidChange:(UITextView *)textView {
-    CGFloat height = [self contentSizeOfText:textView.text];
+    CGFloat height = [self contentSizeOfText:textView.text]; // 计算文字高度
     _offsetY = self.frame.origin.y;
     if (height != self.frame.size.height) {
         _offsetY = _offsetY - (height - self.frame.size.height);
         self.frame = CGRectMake(0, _offsetY, [UIScreen mainScreen].bounds.size.width, height);
         if (self.changeFrame) {
-            self.changeFrame(_offsetY);
+            self.changeFrame(_offsetY); // 回调
         } 
     }
-    
     textView.frame = CGRectMake(0, 0, self.frame.size.width, height);
 }
 
 - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
     NSString *str = textView.text;
     str = [str stringByAppendingString:text];
-    CGFloat height = [self contentSizeOfText:str];
+    CGFloat height = [self contentSizeOfText:str]; // 计算文字高度
     _offsetY = self.frame.origin.y;
     if (height != self.frame.size.height) {
         _offsetY = _offsetY - (height - self.frame.size.height);
         self.frame = CGRectMake(0, _offsetY, [UIScreen mainScreen].bounds.size.width, height);
         if (self.changeFrame) {
-            self.changeFrame(_offsetY);
+            self.changeFrame(_offsetY); // 回调
         }
     }
-
     textView.frame = CGRectMake(0, 0, self.frame.size.width, height);
     return YES;
 }

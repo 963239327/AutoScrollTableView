@@ -10,7 +10,7 @@
 
 @interface PTBaseModel : NSObject
 
-@property (nonatomic, strong) NSString *imgPath;
-@property (nonatomic, strong) NSString *content;
+@property (nonatomic, copy) NSString *imgPath;
+@property (nonatomic, copy) NSString *content;
 
 @end

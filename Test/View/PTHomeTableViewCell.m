@@ -15,8 +15,8 @@
 #pragma mark - init
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
-        [self.contentView addSubview:self.contentLabel];
         [self.contentView addSubview:self.imgView];
+        [self.contentView addSubview:self.contentLabel];
         [self.contentView addSubview:self.commentButton];
     }
     return self;
