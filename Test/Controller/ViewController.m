@@ -14,11 +14,9 @@
 #import "PTCommentInputViewDelegate.h"
 
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate, PTCommentInputViewDelegate>
-
 @property (nonatomic, strong) PTCommentInputView *myView;
 @property (nonatomic, strong) UITableView *myTableView;
 @property (nonatomic, strong) NSMutableArray *dataSource;
-
 @end
 
 @implementation ViewController
@@ -32,9 +30,14 @@
     [self.view addSubview:self.myView];
 }
 
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didShowKey:) name:UIKeyboardDidChangeFrameNotification object:nil];
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardDidChangeFrameNotification object:nil];
 }
 
 #pragma mark - UITableViewDataSource
