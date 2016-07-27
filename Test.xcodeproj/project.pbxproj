@@ -13,6 +13,8 @@
 		2FC24E041CBFA65C00086CBF /* PTBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC24E011CBFA65C00086CBF /* PTBaseModel.m */; };
 		2FC24E051CBFA65C00086CBF /* PTModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC24E031CBFA65C00086CBF /* PTModel.m */; };
 		2FC24E0A1CBFA66200086CBF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC24E081CBFA66200086CBF /* AppDelegate.m */; };
+		2FD0C2CB1D48895800C045BD /* UIMenuController+PTContentLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FD0C2CA1D48895800C045BD /* UIMenuController+PTContentLabel.m */; };
+		2FD0C2CE1D488C0D00C045BD /* PTActionLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FD0C2CD1D488C0D00C045BD /* PTActionLabel.m */; };
 		2FF8F94E1CA23604003CD86F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FF8F94D1CA23604003CD86F /* main.m */; };
 		2FF8F9571CA23604003CD86F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FF8F9551CA23604003CD86F /* Main.storyboard */; };
 		2FF8F9591CA23604003CD86F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FF8F9581CA23604003CD86F /* Assets.xcassets */; };
@@ -49,9 +51,13 @@
 		2FC24E011CBFA65C00086CBF /* PTBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTBaseModel.m; sourceTree = "<group>"; };
 		2FC24E021CBFA65C00086CBF /* PTModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTModel.h; sourceTree = "<group>"; };
 		2FC24E031CBFA65C00086CBF /* PTModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTModel.m; sourceTree = "<group>"; };
-		2FC24E071CBFA66200086CBF /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		2FC24E081CBFA66200086CBF /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2FC24E071CBFA66200086CBF /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Delegate/AppDelegate.h; sourceTree = "<group>"; };
+		2FC24E081CBFA66200086CBF /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Delegate/AppDelegate.m; sourceTree = "<group>"; };
 		2FC24E091CBFA66200086CBF /* PTCommentInputViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTCommentInputViewDelegate.h; sourceTree = "<group>"; };
+		2FD0C2C91D48895800C045BD /* UIMenuController+PTContentLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIMenuController+PTContentLabel.h"; sourceTree = "<group>"; };
+		2FD0C2CA1D48895800C045BD /* UIMenuController+PTContentLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIMenuController+PTContentLabel.m"; sourceTree = "<group>"; };
+		2FD0C2CC1D488C0D00C045BD /* PTActionLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTActionLabel.h; sourceTree = "<group>"; };
+		2FD0C2CD1D488C0D00C045BD /* PTActionLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTActionLabel.m; sourceTree = "<group>"; };
 		2FF8F9491CA23604003CD86F /* Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FF8F94D1CA23604003CD86F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2FF8F9561CA23604003CD86F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -107,6 +113,8 @@
 				2FC24DFA1CBFA65900086CBF /* PTCommentInputView.m */,
 				2FC24DFB1CBFA65900086CBF /* PTHomeTableViewCell.h */,
 				2FC24DFC1CBFA65900086CBF /* PTHomeTableViewCell.m */,
+				2FD0C2CC1D488C0D00C045BD /* PTActionLabel.h */,
+				2FD0C2CD1D488C0D00C045BD /* PTActionLabel.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -125,11 +133,18 @@
 		2FC24E061CBFA66200086CBF /* Delegate */ = {
 			isa = PBXGroup;
 			children = (
-				2FC24E071CBFA66200086CBF /* AppDelegate.h */,
-				2FC24E081CBFA66200086CBF /* AppDelegate.m */,
 				2FC24E091CBFA66200086CBF /* PTCommentInputViewDelegate.h */,
 			);
 			path = Delegate;
+			sourceTree = "<group>";
+		};
+		2FD0C2C81D48891200C045BD /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				2FD0C2C91D48895800C045BD /* UIMenuController+PTContentLabel.h */,
+				2FD0C2CA1D48895800C045BD /* UIMenuController+PTContentLabel.m */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		2FF8F9401CA23604003CD86F = {
@@ -155,6 +170,7 @@
 		2FF8F94B1CA23604003CD86F /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				2FD0C2C81D48891200C045BD /* Common */,
 				2FC24E061CBFA66200086CBF /* Delegate */,
 				2FC24DFF1CBFA65C00086CBF /* Model */,
 				2FC24DF81CBFA65900086CBF /* View */,
@@ -167,6 +183,8 @@
 		2FF8F94C1CA23604003CD86F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2FC24E071CBFA66200086CBF /* AppDelegate.h */,
+				2FC24E081CBFA66200086CBF /* AppDelegate.m */,
 				2FF8F9551CA23604003CD86F /* Main.storyboard */,
 				2FF8F95A1CA23604003CD86F /* LaunchScreen.storyboard */,
 				2FF8F9581CA23604003CD86F /* Assets.xcassets */,
@@ -325,12 +343,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FC24DFE1CBFA65900086CBF /* PTHomeTableViewCell.m in Sources */,
+				2FD0C2CE1D488C0D00C045BD /* PTActionLabel.m in Sources */,
 				2FC24E051CBFA65C00086CBF /* PTModel.m in Sources */,
 				2FC24DF71CBFA65300086CBF /* ViewController.m in Sources */,
 				2FF8F94E1CA23604003CD86F /* main.m in Sources */,
 				2FC24DFD1CBFA65900086CBF /* PTCommentInputView.m in Sources */,
 				2FC24E041CBFA65C00086CBF /* PTBaseModel.m in Sources */,
 				2FC24E0A1CBFA66200086CBF /* AppDelegate.m in Sources */,
+				2FD0C2CB1D48895800C045BD /* UIMenuController+PTContentLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

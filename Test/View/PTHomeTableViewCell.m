@@ -9,6 +9,8 @@
 #import "PTHomeTableViewCell.h"
 #import "PTBaseModel.h"
 #import "ViewController.h"
+#import "UIMenuController+PTContentLabel.h"
+#import "PTActionLabel.h"
 
 @implementation PTHomeTableViewCell
 
@@ -34,6 +36,46 @@
     [self.delegate shouldShowKeyBoardWithIndexPath:self.indexPath];
 }
 
+#pragma mark - action
+- (void)onClickTap:(UIGestureRecognizer *)recognizer {
+    UIMenuController *menu = [UIMenuController sharedMenuController];
+    if (menu.isMenuVisible) {
+        [menu setMenuVisible:NO animated:YES];
+        return;
+    }
+    
+    [menu setLabel:self.contentLabel];
+    [self.contentLabel becomeFirstResponder];
+    
+    UIMenuItem *replyMenuItem = [[UIMenuItem alloc] initWithTitle:@"回复" action:@selector(onClickReply:)];
+    UIMenuItem *copyMenuItem = [[UIMenuItem alloc] initWithTitle:@"复制" action:@selector(onClickCopy:)];
+    UIMenuItem *voteDownMenuItem = [[UIMenuItem alloc] initWithTitle:@"踩" action:@selector(onClickVoteDown:)];
+    UIMenuItem *shareMenuItem = [[UIMenuItem alloc] initWithTitle:@"分享" action:@selector(onClickShare:)];
+    menu.menuItems = @[replyMenuItem, copyMenuItem, voteDownMenuItem, shareMenuItem];
+    [menu setTargetRect:self.contentLabel.frame inView:self];
+    [menu setMenuVisible:YES animated:YES];
+}
+
+- (IBAction)onClickReply:(id)sender {
+    NSLog(@"onClickReply...");
+}
+
+- (IBAction)onClickCopy:(id)sender {
+    NSLog(@"onClickCopy...");
+}
+
+- (IBAction)onClickVoteDown:(id)sender {
+    NSLog(@"onClickVoteDown...");
+}
+
+- (IBAction)onClickShare:(id)sender {
+    NSLog(@"onClickShare...");
+}
+
+- (BOOL)canPerformAction:(SEL)action withSender:(id)sender {
+    return (action == @selector(onClickReply:) || action == @selector(onClickCopy:) || action == @selector(onClickVoteDown:) || action == @selector(onClickShare:));
+}
+
 #pragma mark - getter
 - (UIImageView *)imgView {
     if (!_imgView) {
@@ -42,10 +84,13 @@
     return _imgView;
 }
 
-- (UILabel *)contentLabel {
+- (PTActionLabel *)contentLabel {
     if (!_contentLabel) {
-        _contentLabel = [[UILabel alloc] initWithFrame:CGRectMake(75, 20, 200, 25)];
+        _contentLabel = [[PTActionLabel alloc] initWithFrame:CGRectMake(75, 20, 200, 25)];
         _contentLabel.font = [UIFont systemFontOfSize:20];
+        
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onClickTap:)];
+        [_contentLabel addGestureRecognizer:tap];
     }
     return _contentLabel;
 }

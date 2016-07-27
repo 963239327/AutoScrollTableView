@@ -12,6 +12,7 @@
 #import "PTModel.h"
 #import "PTBaseModel.h"
 #import "PTCommentInputViewDelegate.h"
+#import "UIMenuController+PTContentLabel.h"
 
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate, PTCommentInputViewDelegate>
 @property (nonatomic, strong) PTCommentInputView *myView;
@@ -33,11 +34,15 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didShowKey:) name:UIKeyboardDidChangeFrameNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(menuControllerWillShowOrHide:) name:UIMenuControllerWillShowMenuNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(menuControllerWillShowOrHide:) name:UIMenuControllerWillHideMenuNotification object:nil];
 }
 
-- (void)viewDidDisappear:(BOOL)animated {
-    [super viewDidDisappear:animated];
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardDidChangeFrameNotification object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIMenuControllerWillShowMenuNotification object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIMenuControllerWillHideMenuNotification object:nil];
 }
 
 #pragma mark - UITableViewDataSource
@@ -66,7 +71,7 @@
     });
 }
 
-#pragma mark - 自定义方法
+#pragma mark - action
 - (void)didShowKey:(NSNotification *)notific {
     NSDictionary *userInfo = notific.userInfo;
     
@@ -86,6 +91,15 @@
         }
         self.myView.frame = CGRectMake(0,  rect.origin.y-64-h, [UIScreen mainScreen].bounds.size.width, 25);
     }];
+}
+
+- (void)menuControllerWillShowOrHide:(NSNotification *)notification {
+    UIMenuController *menu = [UIMenuController sharedMenuController];
+    if ([notification.name isEqualToString:UIMenuControllerWillShowMenuNotification]) {
+        menu.label.backgroundColor = [UIColor orangeColor];
+    } else {
+        menu.label.backgroundColor = [UIColor clearColor];
+    }
 }
 
 #pragma mark - 键盘消失
