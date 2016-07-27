@@ -35,8 +35,8 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didShowKey:) name:UIKeyboardDidChangeFrameNotification object:nil];
 }
 
-- (void)viewDidDisappear:(BOOL)animated {
-    [super viewDidDisappear:animated];
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardDidChangeFrameNotification object:nil];
 }
 
